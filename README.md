@@ -6,3 +6,7 @@
 
 第1刷の正誤表
 https://github.com/oreilly-japan/real-world-http/wiki/1st-print-eratta
+
+samlesディレクトリには本書のサンプルコードをまとめています。go1.8環境用direnvを使っており、go18/goフォルダにgo1.8の処理系が入っているという前提です。
+
+direnv edit .

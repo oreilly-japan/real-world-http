@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>素数</title>
+        <script src="//unpkg.com/mithril/mithril.js"></script>
+        <script src="//unpkg.com/mithril/stream/stream.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+        const component = {
+          oninit: function(vnode) {
+              this.primes = stream([]);
+              const sse = new EventSource('/prime');
+              sse.onmessage = (event) => {
+                  this.primes().splice(0, 0, JSON.parse(event.data));
+                  m.redraw();
+              };
+          },
+          view: function() {
+            return m("div", [
+              m("ul", this.primes().map((prime) => {
+                return m("li", {key: prime.id}, prime.number);
+              }))
+            ]);
+          }
+        };
+        m.mount(document.getElementById("root"), component);
+        </script>
+    </body>
+</html>

@@ -4,8 +4,13 @@
 
 ご意見・ご感想の送付方法は[こちら](https://www.oreilly.co.jp/feedback/)をご覧ください。
 
+第2刷の正誤表
+https://github.com/oreilly-japan/real-world-http/wiki/2nd-print-eratta
+
 第1刷の正誤表
 https://github.com/oreilly-japan/real-world-http/wiki/1st-print-eratta
+
+
 
 samlesディレクトリには本書のサンプルコードをまとめています。go1.8環境用direnvを使っており、go18/goフォルダにgo1.8の処理系が入っているという前提です。
 
